@@ -8,7 +8,7 @@ var Enemy = function() {
 
     // The image/sprite for our enemies,this uses
     // a helper we've provided to easily load images
-    this.sprite = 'images/enemy-bug.png';
+    this.sprite = 'enemy-bug.png';
     this.originX = 0;
     this.originY = 0
     this.newX = 0;
@@ -18,7 +18,7 @@ var Enemy = function() {
 
 };
 var Collectible= function(){
-    this.sprite = 'images/collect.png';
+    this.sprite = 'collect.png';
     this.originX = 0;
     this.originY = 0
     this.newX = 0;
@@ -51,7 +51,7 @@ Collectible.prototype.generateXYPosition = function() { //generate random Yposit
     } else {
         this.originY = 300;
          this.originX=25;
-         this.sprite='images/collect.png'; 
+         this.sprite='collect.png'; 
     }
 
     this.newY = this.originY;
@@ -65,14 +65,14 @@ Collectible.prototype.update = function (){
     {if (randomFactor <= 3) {
             this.originY = 230;
             this.originX= 124;
-            this.sprite='images/collect3.png'; 
+            this.sprite='collect3.png'; 
         } else if (randomFactor > 3 && randomFactor <= 6) {
             this.originY = 145;
             this.originX=23;
         } else {
             this.originY = 300;
             this.originX=327;
-            this.sprite='images/collect.png'; 
+            this.sprite='collect.png'; 
         }
     
         this.newY = this.originY;
@@ -178,7 +178,7 @@ Player.prototype.render = function() {
 
     if (this.won === true) {
         var image = new Image(); // creates a new image to insert it as the player
-        image.src = "images/begin.png"; // loads the source for the player object
+        image.src = "begin.png"; // loads the source for the player object
         ctx.drawImage(image, 90, 150);
         ctx.font = '20pt Impact';
         ctx.strokeStyle = 'black';
@@ -258,15 +258,15 @@ Player.prototype.handleInput = function(inputKey) {
     }
 
     if (inputKey === '1' && this.newX === 405 && this.newY === 400) {
-        this.newSprite = "images/char-horn-girl.png";
+        this.newSprite = "char-horn-girl.png";
     } else if (inputKey === '2' && this.newX === 405 && this.newY === 400) {
-        this.newSprite = "images/char-pink-girl.png";
+        this.newSprite = "char-pink-girl.png";
     } else if (inputKey === '3' && this.newX === 405 && this.newY === 400) {
-        this.newSprite = "images/char-princess-girl.png";
+        this.newSprite = "char-princess-girl.png";
     } else if (inputKey === '4' && this.newX === 405 && this.newY === 400) {
-        this.newSprite = "images/char-cat-girl.png";
+        this.newSprite = "char-cat-girl.png";
     } else if (inputKey === '5' && this.newX === 405 && this.newY === 400) {
-        this.newSprite = "images/char-boy.png";
+        this.newSprite = "char-boy.png";
     }
     if (inputKey === 'enter') {
         this.won = false;
@@ -289,19 +289,19 @@ Player.prototype.pSelector = function() {
     ran = ran * 10; // multiplying by 10 to get the first digit of the random number
     ran = Math.ceil(ran); // ceiling to make it a single digit number
     if (ran === 1 || ran === 2) {
-        this.sprite = "images/char-horn-girl.png";
+        this.sprite = "char-horn-girl.png";
         this.newSprite = this.sprite;
     } else if (ran === 3 || ran === 4) {
-        this.sprite = "images/char-pink-girl.png";
+        this.sprite = "char-pink-girl.png";
         this.newSprite = this.sprite;
     } else if (ran === 5 || ran === 6) {
-        this.sprite = "images/char-princess-girl.png";
+        this.sprite = "char-princess-girl.png";
         this.newSprite = this.sprite;
     } else if (ran === 7 || ran === 8) {
-        this.sprite = "images/char-cat-girl.png";
+        this.sprite = "char-cat-girl.png";
         this.newSprite = this.sprite;
     } else {
-        this.sprite = "images/char-boy.png";
+        this.sprite = "char-boy.png";
         this.newSprite = this.sprite;
     }
 };
