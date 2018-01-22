@@ -122,12 +122,12 @@ var Engine = (function(global) {
          * for that particular row of the game level.
          */
         var rowImages = [
-                'images/water-block.png', // Top row is water
-                'images/stone-block.png', // Row 1 of 3 of stone
-                'images/stone-block.png', // Row 2 of 3 of stone
-                'images/stone-block.png', // Row 3 of 3 of stone
-                'images/grass-block.png', // Row 1 of 2 of grass
-                'images/grass-block.png' // Row 2 of 2 of grass
+                'water-block.png', // Top row is water
+                'stone-block.png', // Row 1 of 3 of stone
+                'stone-block.png', // Row 2 of 3 of stone
+                'stone-block.png', // Row 3 of 3 of stone
+                'grass-block.png', // Row 1 of 2 of grass
+                'grass-block.png' // Row 2 of 2 of grass
             ],
             numRows = 6,
             numCols = 5,
@@ -152,7 +152,7 @@ var Engine = (function(global) {
                 ctx.drawImage(Resources.get(rowImages[row]), col * 101, row * 83);
             }
         }
-        ctx.drawImage(Resources.get('images/Star.png'), 405, 400);
+        ctx.drawImage(Resources.get('Star.png'), 405, 400);
 
         renderEntities();
     }
@@ -188,21 +188,21 @@ var Engine = (function(global) {
      * all of these images are properly loaded our game will start.
      */
     Resources.load([
-        'images/stone-block.png',
-        'images/water-block.png',
-        'images/grass-block.png',
-        'images/enemy-bug.png',
-        'images/char-boy.png',
-        'images/char-horn-girl.png',
-        'images/char-pink-girl.png',
-        'images/char-princess-girl.png',
-        'images/char-cat-girl.png',
-        'images/Star.png',
-        'images/begin.png',
-        'images/Selector.png',
-        'images/collect.png',
-        'images/collect2.png',
-        'images/collect3.png'
+        'stone-block.png',
+        'water-block.png',
+        'grass-block.png',
+        'enemy-bug.png',
+        'char-boy.png',
+        'char-horn-girl.png',
+        'char-pink-girl.png',
+        'char-princess-girl.png',
+        'char-cat-girl.png',
+        'Star.png',
+        'begin.png',
+        'Selector.png',
+        'collect.png',
+        'collect2.png',
+        'collect3.png'
 
     ]);
     Resources.onReady(init);
